@@ -36,7 +36,7 @@ npm run dev
 
 ### Step 4: Start coding
 
-We want to judge your ability to program UIs, not configure build tools. That's why we chose [Parcel](https://parceljs.org/) as a bundler, please consult the [documentation](https://parceljs.org/getting_started.html) if you run into any trouble.
+We want to review your ability to program UIs, not configure build tools. That's why we chose [Parcel](https://parceljs.org/) as a bundler, please consult the [documentation](https://parceljs.org/getting_started.html) if you run into any trouble.
 
 We added a CSS file as an example, feel free to delete that.
 
