@@ -1,15 +1,31 @@
 import React from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
 import { fetchResult } from '../store/result';
+import { SearchBar } from './index';
 
 class Main extends React.Component {
   componentDidMount() {
-    const query = 'hello whats up';
+    const query = 'rails';
     this.props.getResult(query);
   }
   render() {
-    return <h1>From Main file</h1>;
+    console.log('in render', this.props.result);
+    //search bar component
+    //search results component
+    return (
+      <div className="main">
+        <SearchBar />
+        <div className="searchResults">
+          {this.props.result.length ? (
+            this.props.result.map((res) => {
+              return <div>{res.name}</div>;
+            })
+          ) : (
+            <p>No results</p>
+          )}
+        </div>
+      </div>
+    );
   }
 }
 
