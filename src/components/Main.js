@@ -1,13 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchResult } from '../store/result';
+import savedGems from '../store/savedGems';
 import { SearchBar, SingleGem } from './index';
 
 class Main extends React.Component {
-  // componentDidMount() {
-  //   const query = 'rails';
-  //   this.props.getResult(query);
-  // }
   render() {
     console.log('in render', this.props.result);
     return (
@@ -16,6 +13,9 @@ class Main extends React.Component {
         <div className="searchResults">
           {this.props.result.length ? (
             this.props.result.map((res, idx) => {
+              this.props.savedGems.includes(res)
+                ? (res.saved = true)
+                : (res.saved = false);
               return <SingleGem gem={res} key={idx} />;
             })
           ) : (
@@ -29,6 +29,7 @@ class Main extends React.Component {
 
 const mapStateToProps = (state) => ({
   result: state.result,
+  savedGems: state.savedGems,
 });
 
 const mapDispatchToProps = (dispatch) => ({

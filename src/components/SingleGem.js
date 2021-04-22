@@ -5,26 +5,28 @@ import { addGemToStorage, removeGemFromStorage } from '../store/savedGems';
 export class SingleGem extends React.Component {
   constructor() {
     super();
-    this.state = {
-      saved: false,
-    };
+    // this.state = {
+    //   saved: false,
+    // };
     this.handleSave = this.handleSave.bind(this);
     this.handleUnsave = this.handleUnsave.bind(this);
   }
 
-  componentDidMount() {
-    if (localStorage.getItem(this.props.gem.name)) {
-      this.setState({ saved: true });
-    }
-  }
+  // componentDidMount() {
+  //   if (this.props.savedGems.includes(this.props.gem)) {
+  //     this.setState({ saved: true });
+  //   }
+  // }
 
-  handleSave(e) {
-    this.setState({ saved: true });
+  handleSave() {
+    // this.setState({ saved: true });
+    this.props.gem.saved = true;
     this.props.saveGem(this.props.gem);
   }
 
-  handleUnsave(e) {
-    this.setState({ saved: false });
+  handleUnsave() {
+    // this.setState({ saved: false });
+    this.props.gem.saved = false;
     this.props.removeGem(this.props.gem);
   }
 
@@ -35,6 +37,7 @@ export class SingleGem extends React.Component {
       documentation_uri,
       info,
       version,
+      saved,
     } = this.props.gem;
     return (
       <div className="single-gem-wrapper">
@@ -48,14 +51,18 @@ export class SingleGem extends React.Component {
         <p>{info}</p>
         <button
           className="btn"
-          onClick={this.state.saved ? this.handleUnsave : this.handleSave}
+          onClick={saved ? this.handleUnsave : this.handleSave}
         >
-          {this.state.saved ? 'Unsave Gem' : 'Save Gem'}
+          {saved ? 'Unsave Gem' : 'Save Gem'}
         </button>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  savedGems: state.savedGems,
+});
 
 const mapDispatchToProps = (dispatch) => ({
   saveGem: (gem) => {
@@ -66,4 +73,4 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export default connect(null, mapDispatchToProps)(SingleGem);
+export default connect(mapStateToProps, mapDispatchToProps)(SingleGem);
