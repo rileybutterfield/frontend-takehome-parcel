@@ -18,10 +18,16 @@ export class SingleGem extends React.Component {
   }
 
   render() {
-    const { name, downloads, gem_uri, info, version } = this.props.gem;
+    const {
+      name,
+      downloads,
+      documentation_uri,
+      info,
+      version,
+    } = this.props.gem;
     return (
       <div className="single-gem-wrapper">
-        <a href={gem_uri}>
+        <a href={documentation_uri} target="_blank">
           <h5>{name}</h5>
         </a>
         <span>
