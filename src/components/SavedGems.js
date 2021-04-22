@@ -15,7 +15,6 @@ class SavedGems extends React.Component {
         <div className="saved-gems">
           {this.props.savedGems.length ? (
             this.props.savedGems.map((gem, idx) => {
-              console.log('GEM', gem);
               return <SingleGem gem={gem} key={idx} />;
             })
           ) : (

@@ -13,7 +13,7 @@ class Main extends React.Component {
         <div className="searchResults">
           {this.props.result.length ? (
             this.props.result.map((res, idx) => {
-              this.props.savedGems.includes(res)
+              localStorage.getItem(res.name)
                 ? (res.saved = true)
                 : (res.saved = false);
               return <SingleGem gem={res} key={idx} />;

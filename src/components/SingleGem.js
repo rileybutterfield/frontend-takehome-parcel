@@ -5,27 +5,16 @@ import { addGemToStorage, removeGemFromStorage } from '../store/savedGems';
 export class SingleGem extends React.Component {
   constructor() {
     super();
-    // this.state = {
-    //   saved: false,
-    // };
     this.handleSave = this.handleSave.bind(this);
     this.handleUnsave = this.handleUnsave.bind(this);
   }
 
-  // componentDidMount() {
-  //   if (this.props.savedGems.includes(this.props.gem)) {
-  //     this.setState({ saved: true });
-  //   }
-  // }
-
   handleSave() {
-    // this.setState({ saved: true });
     this.props.gem.saved = true;
     this.props.saveGem(this.props.gem);
   }
 
   handleUnsave() {
-    // this.setState({ saved: false });
     this.props.gem.saved = false;
     this.props.removeGem(this.props.gem);
   }
