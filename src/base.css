@@ -1,8 +1,16 @@
+:root {
+  --background: #eee;
+  --midGreen: #21cd9c;
+  --midGreenHover: #08b483;
+  --darkGreen: #1b4942;
+  --paleGreen: #c8e3d8;
+}
+
 body {
-  background: #eee;
+  background: var(--background);
   font-family: Georgia;
   margin: 0;
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 .big-lorem-ipsum {
@@ -10,4 +18,30 @@ body {
   font-weight: 300;
   margin: 0 auto;
   max-width: 15em;
+}
+
+.btn {
+  background-color: var(--midGreen);
+  color: black;
+  font-family: Georgia;
+}
+
+.btn:hover {
+  background-color: var(--midGreenHover);
+}
+
+.nav {
+  background-color: var(--midGreen);
+}
+
+.nav-text {
+  color: black;
+  font-size: 20px;
+}
+
+.logo {
+  margin-left: 20px;
+  margin-top: 17px;
+  width: 30px;
+  height: 30px;
 }

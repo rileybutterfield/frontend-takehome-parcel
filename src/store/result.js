@@ -21,8 +21,10 @@ const getResult = (result) => ({ type: GET_RESULT, result });
 
 export const fetchResult = (queryStr) => async (dispatch) => {
   try {
+    const encodedStr = encodeURIComponent(queryStr);
+    console.log(encodedStr);
     const { data } = await axios.get(
-      `http://localhost:3000/api/v1/search.json?query=${queryStr}`
+      `http://localhost:3000/api/v1/search.json?query=${encodedStr}`
     );
     dispatch(getResult(data));
   } catch (err) {

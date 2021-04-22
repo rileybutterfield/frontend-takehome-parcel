@@ -34,40 +34,10 @@ export class SearchBar extends React.Component {
                 placeholder="Search for a gem"
               />
             </div>
-            <button
-              className="btn waves-effect waves-light"
-              type="submit"
-              name="action"
-            >
+            <button className="btn" type="submit" name="action">
               Search
               <i className="material-icons right">send</i>
             </button>
-            {/* <button
-              className="btn waves-effect waves-light"
-              type="button"
-              name="action"
-              onClick={() => this.setState({ copied: 'copy', query: '' })}
-            >
-              Clear
-              <i className="material-icons right">clear</i>
-            </button>
-            <button
-              className="btn waves-effect waves-light"
-              type="button"
-              name="action"
-              onClick={this.copyText}
-            >
-              {this.state.copied}
-              <i className="material-icons right">content_copy</i>
-            </button> */}
-            {/* {(this.props.error.parser.error ||
-              this.props.error.database.error) && (
-              <div className="errorMessage">
-                {this.props.error.parser.error ||
-                  this.props.error.database.error}
-                <i className="material-icons errorIcon">error_outline</i>
-              </div>
-            )} */}
           </div>
         </form>
       </div>
