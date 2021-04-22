@@ -24,13 +24,15 @@ body {
 }
 
 .btn {
-  background-color: var(--midGreen);
-  color: black;
-  font-family: Georgia;
+  background-color: black;
+  color: white;
+  font-family: Basis, Arial, sans-serif;
+  text-transform: unset;
+  font-size: 16px;
 }
 
 .btn:hover {
-  background-color: var(--midGreenHover);
+  background-color: #222222;
 }
 
 .nav {
@@ -48,4 +50,20 @@ body {
   margin-top: 17px;
   width: 30px;
   height: 30px;
+}
+
+.query-box {
+  margin-bottom: 20px;
+}
+
+.single-gem-wrapper {
+  border-bottom: 1px solid var(--darkGreen);
+  padding: 10px;
+  background-color: var(--paleGreen);
+  color: var(--darkGreen);
+}
+
+.single-gem-wrapper h5 {
+  color: var(--darkGreen);
+  font-weight: bolder;
 }
