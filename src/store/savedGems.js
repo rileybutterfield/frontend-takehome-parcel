@@ -48,7 +48,6 @@ export const getGemsFromStorage = () => async (dispatch) => {
     while (i--) {
       gems.push(JSON.parse(localStorage.getItem(keys[i])));
     }
-    console.log(gems);
     dispatch(getGems(gems));
   } catch (err) {
     console.log(err);
@@ -68,7 +67,6 @@ export default function (state = savedGems, action) {
       });
       return stateCopy;
     case GET_GEMS:
-      console.log('GET GEMS', action.gems);
       return action.gems;
     default:
       return state;

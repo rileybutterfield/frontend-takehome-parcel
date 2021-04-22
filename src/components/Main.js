@@ -6,7 +6,6 @@ import { SearchBar, SingleGem } from './index';
 
 class Main extends React.Component {
   render() {
-    console.log('in render', this.props.result);
     return (
       <div className="main">
         <SearchBar />
