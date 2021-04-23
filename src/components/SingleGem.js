@@ -34,8 +34,8 @@ export class SingleGem extends React.Component {
           <h5>{name}</h5>
         </a>
         <p>
-          <b>version:</b> {version} <b>downloads:</b>
-          {downloads}
+          <b>version:</b> {version} <b>downloads: </b>
+          {downloads.toLocaleString()}
         </p>
         <p>{info}</p>
         <button
