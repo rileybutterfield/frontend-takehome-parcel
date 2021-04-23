@@ -24,7 +24,7 @@ Users can use the nav bar to navigate to a "Saved Gems" page, where the saved ge
 
 ## With More Time
 
-If I had more time to work on this assignment, I would be interested in utilizing pagination for both the search results as well as saved gems (when necessary). Additionally, I would explore optimization options within localStorage, whether that means storing smaller versions of the result strings, or possibly storing a single saved key-value pair, where additional saved gems are appended to the list. I would also be interested in writing tests to ensure that my code runs as expected and that component rendering is consistent on re-renders. Finally, the sky is the limit in terms of what can be done with design, and I'd love to get even more creative with creating a beautiful and effective UI :)
+If I had more time to work on this assignment, I would be interested in utilizing pagination for both the search results as well as saved gems (when necessary). Additionally, I would explore optimization options within localStorage, whether that might mean storing smaller versions of the result strings, or possibly storing a single saved key-value pair, where additional saved gems are appended to the list. I would also be interested in writing tests to ensure that my code runs as expected and that component rendering is consistent on re-renders. Finally, the sky is the limit in terms of what can be done with design, and I'd love to get even more creative with creating a beautiful and effective UI :)
 
 ---
 
