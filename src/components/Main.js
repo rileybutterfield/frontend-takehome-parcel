@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchResult } from '../store/result';
-import savedGems from '../store/savedGems';
 import { SearchBar, SingleGem } from './index';
 
 class Main extends React.Component {
   render() {
     return (
       <div className="main">
+        <h1>Search Gems</h1>
         <SearchBar />
         <div className="searchResults">
           {this.props.result.length ? (
